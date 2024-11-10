@@ -26,7 +26,8 @@ fc-cache -fv
 # Stow configurations
 ###
 
-stow -t ~/ ~/dotfiles/nvim
+cd ~/dotfiles
+stow -t ~/ nvim
 
 
 
