@@ -1,29 +1,8 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This repo holds a slim down version of my regular dotfiles for devpod containers.
+Some additions on development specific features may be made like AI assistant or development specific plugins.
 
-### What is this repository for? ###
+Should be used in conjunction with GNU stow.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+The setup script is executed automatically when this dotfiles repo is used in the devpods startup option.
