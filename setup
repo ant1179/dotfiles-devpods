@@ -28,8 +28,7 @@ fc-cache -fv
 
 cd ~/dotfiles
 stow -t ~/ nvim
-stow -t ~/ zsh
 
-
+echo "source ~/dotfiles/zsh/.zshrc >> ~/.zshrc"
 
 echo "**************************"
