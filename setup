@@ -28,7 +28,7 @@ fc-cache -fv
 
 cd ~/dotfiles
 stow -t ~/ nvim
-
+stow -t ~/ zsh
 
 
 
