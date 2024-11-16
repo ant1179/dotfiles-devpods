@@ -1,7 +1,5 @@
 #!/bin/sh
 
-exit 0
-
 # # install powerline font for agnoster theme
 # git clone https://github.com/powerline/fonts.git
 # cd fonts
@@ -9,7 +7,9 @@ exit 0
 # cd .. && rm -rf fonts
 #
 # # install oh-my-zsh
-# wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+sudo apt update && \
+	sudo apt install zsh -y
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 # zsh -c 'git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete'
 # zsh -c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
 # zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
