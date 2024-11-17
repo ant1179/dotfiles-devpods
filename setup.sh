@@ -15,10 +15,16 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 
 # install additional software packages using apt (keep it at minimum)
 sudo apt update && \
-	sudo apt install fzf exa -y
+	sudo apt install exa -y
 
 # copy the zsh config file from dotfiles into the container
 cp ./zsh/.zshrc ~
+
+# install fzf manually (throws error when installed through binary)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-fish
+echo "export FZF_HOME=~/.fzf" >> ~/.zshrc
+echo "export PATH=$FZF_HOME/bin:$PATH" >> ~/.zshrc
 
 # switch to zsh
 echo "zsh" >> ~/.bashrc
