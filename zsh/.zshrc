@@ -5,7 +5,7 @@ export TERM=xterm
 # # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussel"
+ZSH_THEME="jonathan"
 
 plugins=(git)
 # plugins=(git fzf z chucknorris zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
