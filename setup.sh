@@ -15,7 +15,10 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 
 # install additional software packages using apt (keep it at minimum)
 sudo apt update && \
-	sudo apt install exa bat -y
+	sudo apt install exa bat ripgrep -y
+
+# install non available packages through brew
+brew install jless
 
 # copy the zsh config file from dotfiles into the container
 cp ./zsh/.zshrc ~
