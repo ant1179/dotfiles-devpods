@@ -18,8 +18,6 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#
 # ###
 # # User configuration
 # ###
