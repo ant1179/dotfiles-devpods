@@ -15,6 +15,10 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlightin
 
 source $ZSH/oh-my-zsh.sh
 
+# keybindings for zsh-history-substring-search plugin
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #
 # ###
