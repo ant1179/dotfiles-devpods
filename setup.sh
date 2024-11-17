@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# install powerline fonts
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd .. && rm -rf fonts
+
 # copy the zsh config file from dotfiles into the container
 cp ./zsh/.zshrc ~
 
