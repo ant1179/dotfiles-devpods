@@ -1,11 +1,12 @@
 # export default term variable to prevent a bug in zsh
 # bug documented here: https://stackoverflow.com/questions/17627193/backspace-in-zsh-fails-to-work-in-quite-the-strange-way 
 export TERM=xterm
+export EDITOR=nvim
 
 # # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 plugins=(git fzf z zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete zsh-history-substring-search)
 
@@ -18,22 +19,16 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# ###
-# # User configuration
-# ###
-#
-# # environment variables
-# export LOCAL_HOME=$HOME/.local
-# export CONFIG_HOME=$HOME/.config
-# export EDITOR=nvim
-#
-# alias c="clear"
-# alias e="exit"
-#
-# alias ks="ls"
+# aliases
+alias c="clear"
+alias e="exit"
+
+alias ks="ls"
 alias ls="exa -a --group-directories-first --icons"
-# alias ll="ls -l"
-# alias lt="ls -l -snew"
-#
-# alias n="nvim"
+alias ll="ls -l"
+alias lt="ls -l -snew"
+
+alias n="nvim"
+
+alias bat="batcat"
 

@@ -15,7 +15,7 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 
 # install additional software packages using apt (keep it at minimum)
 sudo apt update && \
-	sudo apt install exa -y
+	sudo apt install exa bat -y
 
 # copy the zsh config file from dotfiles into the container
 cp ./zsh/.zshrc ~
