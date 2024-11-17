@@ -1,15 +1,20 @@
+# export default term variable to prevent a bug in zsh
+# bug documented here: https://stackoverflow.com/questions/17627193/backspace-in-zsh-fails-to-work-in-quite-the-strange-way 
+export TERM=xterm
+
 # # Path to your oh-my-zsh installation.
-# export ZSH="$HOME/.oh-my-zsh"
-#
-# ZSH_THEME="robbyrussel"
-#
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussel"
+
+plugins=(git)
 # plugins=(git fzf z chucknorris zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 #
 # # has to be done before sourcing oh-my-zsh.sh
 # fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-#
-# source $ZSH/oh-my-zsh.sh
-#
+
+source $ZSH/oh-my-zsh.sh
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #
 # ###
