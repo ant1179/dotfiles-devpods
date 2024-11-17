@@ -15,7 +15,7 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 
 # install additional software packages using apt (keep it at minimum)
 sudo apt update && \
-	sudo apt install exa bat ripgrep -y
+	sudo apt install exa bat ripgrep stow -y
 
 # install non available packages through brew
 brew install jless
@@ -36,18 +36,7 @@ prompt_context() {}
 # switch to zsh
 echo "zsh" >> ~/.bashrc
 
-# ###
-# # Install
-# ###
-#
-# sudo apt update && \
-# sudo apt install stow -y && \
-# sudo apt install fontconfig -y
-#
-# ###
-# # Configure nerd font
-# ###
-#
+# configure nerd font
 # cd ~
 # wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 # mkdir -p .local/share/fonts
@@ -57,10 +46,7 @@ echo "zsh" >> ~/.bashrc
 # cd ~
 # rm Meslo.zip
 # fc-cache -fv
-#
-# ###
-# # Stow configurations
-# ###
-#
-# cd ~/dotfiles
-# stow -t ~/ nvim
+
+# stow configuration for dotfiles
+cd ~/dotfiles
+stow -t ~/ nvim
