@@ -17,9 +17,6 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 sudo apt update && \
 	sudo apt install exa bat ripgrep stow -y
 
-# install non available packages through brew
-brew install jless
-
 # copy the zsh config file from dotfiles into the container
 cp ./zsh/.zshrc ~
 
@@ -30,25 +27,10 @@ echo "export FZF_HOME=~/.fzf" >> ~/.zshrc
 echo "export PATH=\$FZF_HOME/bin:\$PATH" >> ~/.zshrc
 echo "[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh \n" >> ~/.zshrc
 
-# configure nerd font
-# cd ~
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-# mkdir -p .local/share/fonts
-# unzip Meslo.zip -d .local/share/fonts
-# cd .local/share/fonts
-# rm *Windows*
-# cd ~
-# rm Meslo.zip
-# fc-cache -fv
-
 # stow configuration for dotfiles
 cd ~/dotfiles
 rm -rf .git
 stow -t ~/ nvim
-
-# remove username@hostname in the prompt
-prompt_context() {}
-prompt_context()
 
 # switch to zsh
 echo "zsh" >> ~/.bashrc
