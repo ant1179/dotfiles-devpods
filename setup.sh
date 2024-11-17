@@ -24,7 +24,7 @@ rm -rf .git
 stow -t ~/ nvim
 
 rm ~/.zshrc
-cp -v zsh/.zshrc zsh/.zshrc.bak
+cp -v zsh/.zshrc ~/.zshrc.bak
 stow -t ~/ zsh
 
 # install fzf manually (throws error when installed through binary)
