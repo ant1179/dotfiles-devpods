@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# copy the zsh config file from dotfiles into the container
+cp ./zsh/.zshrc ~
+
+# switch to zsh
+echo "zsh" >> ~/.bashrc
+
 # # install powerline font for agnoster theme
 # git clone https://github.com/powerline/fonts.git
 # cd fonts
@@ -13,7 +19,7 @@
 # zsh -c 'git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete'
 
 # # copy the zsh config file from dotfiles into the container
-cp ./zsh/.zshrc ~
+# #cp ./zsh/.zshrc ~
 
 # # install agnoster theme
 # mv ~/.zshrc ~/.zshrc.bak
