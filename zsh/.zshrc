@@ -36,3 +36,4 @@ alias ls="exa -a --group-directories-first --icons"
 # alias lt="ls -l -snew"
 #
 # alias n="nvim"
+
