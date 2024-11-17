@@ -17,8 +17,15 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-history-substring-search ${ZS
 sudo apt update && \
 	sudo apt install exa bat ripgrep stow -y
 
-# copy the zsh config file from dotfiles into the container
-cp ./zsh/.zshrc ~
+# stow the config file from dotfiles into the container
+cd ~/dotfiles
+rm -rf .git
+
+stow -t ~/ nvim
+
+rm ~/.zshrc
+cp -v zsh/.zshrc zsh/.zshrc.bak
+stow -t ~/ zsh
 
 # install fzf manually (throws error when installed through binary)
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -28,9 +35,6 @@ echo "export PATH=\$FZF_HOME/bin:\$PATH" >> ~/.zshrc
 echo "[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh \n" >> ~/.zshrc
 
 # stow configuration for dotfiles
-cd ~/dotfiles
-rm -rf .git
-stow -t ~/ nvim
 
 # switch to zsh
 echo "zsh" >> ~/.bashrc
