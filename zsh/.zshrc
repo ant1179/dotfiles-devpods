@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="jonathan"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete)
 # plugins=(git fzf z chucknorris zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 #
 # # has to be done before sourcing oh-my-zsh.sh
