@@ -34,8 +34,6 @@ echo "export FZF_HOME=~/.fzf" >> ~/.zshrc
 echo "export PATH=\$FZF_HOME/bin:\$PATH" >> ~/.zshrc
 echo "[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh \n" >> ~/.zshrc
 
-# stow configuration for dotfiles
-
 # switch to zsh
 echo "zsh" >> ~/.bashrc
 
