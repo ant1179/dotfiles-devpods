@@ -30,6 +30,9 @@ echo "export FZF_HOME=~/.fzf" >> ~/.zshrc
 echo "export PATH=\$FZF_HOME/bin:\$PATH" >> ~/.zshrc
 echo "[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh \n" >> ~/.zshrc
 
+# remove username@hostname in the prompt
+prompt_context() {}
+
 # switch to zsh
 echo "zsh" >> ~/.bashrc
 
