@@ -5,9 +5,9 @@ export TERM=xterm
 # # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="jonathan"
+ZSH_THEME="agnoster"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete zsh-history-substring-search)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete zsh-history-substring-search fzf z)
 # plugins=(fzf z chucknorris )
 #
 # # has to be done before sourcing oh-my-zsh.sh
@@ -34,7 +34,7 @@ bindkey '^[[B' history-substring-search-down
 # alias e="exit"
 #
 # alias ks="ls"
-# alias ls="exa -a --group-directories-first --icons"
+alias ls="exa -a --group-directories-first --icons"
 # alias ll="ls -l"
 # alias lt="ls -l -snew"
 #
