@@ -12,7 +12,8 @@ export LC_ALL=en_US.UTF-8
 
 cp -v $DOTFILES_HOME/zsh/.zshrc ~/.zshrc.bak
 rm ~/.zshrc
-# cd $DOTFILES_HOME
-# stow -t ~/ zsh
-# stow -t ~/ nvim
-cp -v $DOTFILES_HOME/zsh/.zshrc ~/.zshrc
+cd $DOTFILES_HOME
+stow -t ~/ zsh
+stow -t ~/ nvim
+
+exit 0
