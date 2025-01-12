@@ -21,11 +21,18 @@
 cd ~/dotfiles
 rm -rf .git
 
-stow -t ~/ nvim
+# set perl language settings
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 rm ~/.zshrc
 cp -v zsh/.zshrc ~/.zshrc.bak
 stow -t ~/ zsh
+source ~/.zshrc
+
+stow nvim
+
+cd
 
 # install fzf manually (throws error when installed through binary)
 # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
