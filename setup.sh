@@ -10,8 +10,9 @@ rm -rf .git
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-rm ~/.zshrc
 cp -v $DOTFILES_HOME/zsh/.zshrc ~/.zshrc.bak
-cd $DOTFILES_HOME
-stow -t ~/ zsh
-stow -t ~/ nvim
+rm ~/.zshrc
+# cd $DOTFILES_HOME
+# stow -t ~/ zsh
+# stow -t ~/ nvim
+cp -v $DOTFILES_HOME/zsh/.zshrc ~/.zshrc
