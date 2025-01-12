@@ -15,7 +15,3 @@ cp -v $DOTFILES_HOME/zsh/.zshrc ~/.zshrc.bak
 cd $DOTFILES_HOME
 stow -t ~/ zsh
 stow -t ~/ nvim
-
-source ~/.zshrc
-
-cd
