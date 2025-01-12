@@ -37,6 +37,6 @@ alias bat="batcat"
 
 if [ -d ~/.fzf ]; then
   export FZF_HOME=~/.fzf
-  export PATH=\$FZF_HOME/bin:\$PATH
+  export PATH=$FZF_HOME/bin:$PATH
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
