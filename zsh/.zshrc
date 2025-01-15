@@ -19,8 +19,7 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # include completion in kubectl if installed
-kubectl
-if [ "$?" = "0" ]; then 
+if kubectl > /dev/null 2>& 1; then
   source <(kubectl completion zsh)
   complete -o default -F __start_kubectl k
   kubectl completion zsh > "${fpath[1]}/_kubectl"
