@@ -13,12 +13,19 @@ ZSH_THEME="agnoster"
 
 plugins=(git fzf z zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete zsh-history-substring-search)
 
-# # has to be done before sourcing oh-my-zsh.sh
-# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+# has to be done before sourcing oh-my-zsh.sh
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
-# keybindings for zsh-history-substring-search plugin
+# include completion in kubectl if installed
+kubectl
+if [ "$?" = "0" ]; then 
+  source <(kubectl completion zsh)
+  complete -o default -F __start_kubectl k
+  kubectl completion zsh > "${fpath[1]}/_kubectl"
+fi
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
@@ -32,7 +39,14 @@ alias ll="ls -l"
 alias lt="ls -l -snew"
 
 alias n="nvim"
+alias cg="lazygit"
+alias t="tmux"
+alias tn="(){tmux new -s $1}"
 
+alias k="kubectl"
+alias kcon="(){kubectl exec --namespace=$1 --stdin --tty $2 -- /bin/bash}"
+
+alias stow="stow -t ~/"
 alias bat="batcat"
 
 if [ -d ~/.fzf ]; then
