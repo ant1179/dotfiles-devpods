@@ -25,6 +25,11 @@ if kubectl > /dev/null 2>& 1; then
   kubectl completion zsh > "${fpath[1]}/_kubectl"
 fi
 
+# include completion in flux if installed
+if flux > /dev/null 2>& 1; then
+  command -v flux >/dev/null && . <(flux completion zsh)
+fi
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
