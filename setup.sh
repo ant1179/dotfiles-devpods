@@ -5,6 +5,7 @@ DOTFILES_HOME=~/dotfiles
 # stow the config file from dotfiles into the container
 cd $DOTFILES_HOME
 rm -rf .git
+rm .gitignore setup.sh README.md
 
 # set perl language settings
 export LC_CTYPE=en_US.UTF-8
