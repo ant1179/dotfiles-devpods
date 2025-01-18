@@ -2,6 +2,7 @@
 # bug documented here: https://stackoverflow.com/questions/17627193/backspace-in-zsh-fails-to-work-in-quite-the-strange-way 
 export TERM=xterm
 export EDITOR=nvim
+export GPG_TTY=$(tty)
 
 export LC_CTYPE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
