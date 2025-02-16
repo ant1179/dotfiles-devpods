@@ -50,6 +50,7 @@ alias tn="(){tmux new -s $1}"
 
 alias k="kubectl"
 alias kcon="(){kubectl exec --namespace=$1 --stdin --tty $2 -- /bin/bash}"
+alias kctx="(){kubectl config set-context --current --namespace=$1}"
 
 alias stow="stow -t ~/"
 alias bat="batcat"
