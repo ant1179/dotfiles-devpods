@@ -1,5 +1,5 @@
 # export default term variable to prevent a bug in zsh
-# bug documented here: https://stackoverflow.com/questions/17627193/backspace-in-zsh-fails-to-work-in-quite-the-strange-way 
+# bug documented here: https://stackoverflow.com/questions/17627193/backspace-in-zsh-fails-to-work-in-quite-the-strange-way
 export TERM=xterm
 export EDITOR=nvim
 export GPG_TTY=$(tty)
@@ -59,4 +59,14 @@ if [ -d ~/.fzf ]; then
   export FZF_HOME=~/.fzf
   export PATH=$FZF_HOME/bin:$PATH
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+
+if [ -d "$HOME/.nvm" ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
+if [ -f "/usr/share/nvm/init-nvm.sh" ]; then
+	source /usr/share/nvm/init-nvm.sh
 fi
