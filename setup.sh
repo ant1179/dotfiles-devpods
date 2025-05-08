@@ -11,5 +11,6 @@ rm ~/.zshrc
 cd $DOTFILES_HOME
 stow -t ~/ zsh
 stow -t ~/ nvim
+stow -t ~/ tmux
 
 exit 0
